@@ -25,6 +25,17 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="absolute left-5 top-5 rounded-full border border-cobalt/40 bg-cobalt/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-cobalt backdrop-blur-xl">
             Bestseller
           </span>
+          <div className="absolute bottom-5 left-5 right-5 flex flex-wrap gap-2">
+            <span className="rounded-full border border-white/15 bg-black/55 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-xl">
+              237 ml
+            </span>
+            <span className="rounded-full border border-white/15 bg-black/55 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-xl">
+              Hand apply
+            </span>
+            <span className="rounded-full border border-white/15 bg-black/55 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-xl">
+              6-7 months
+            </span>
+          </div>
         </Link>
         <div className="p-6 sm:p-8">
           <div className="flex flex-wrap items-start justify-between gap-4">
@@ -34,9 +45,14 @@ export function ProductCard({ product }: { product: Product }) {
                 {product.title}
               </h3>
             </div>
-            <p className="rounded-2xl border border-white/15 bg-white/[0.07] px-4 py-3 text-2xl font-black text-white">
-              {formatMoney(product.priceCents, product.currency)}
-            </p>
+            <div className="rounded-2xl border border-white/15 bg-white/[0.07] px-4 py-3">
+              <p className="text-[11px] font-black uppercase tracking-[0.14em] text-cobalt">
+                Launch price
+              </p>
+              <p className="mt-1 text-2xl font-black text-white">
+                {formatMoney(product.priceCents, product.currency)}
+              </p>
+            </div>
           </div>
           <p className="mt-5 text-sm leading-7 text-slate-300">
             {product.description}

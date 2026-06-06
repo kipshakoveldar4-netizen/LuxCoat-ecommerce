@@ -8,6 +8,7 @@ import {
   FaqSection,
   FeaturedProductSection,
   HowItWorksSection,
+  PremiumTrustStrip,
   ReviewsSection
 } from "@/components/sections/HomeSections";
 
@@ -15,6 +16,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <PremiumTrustStrip />
       <Benefits />
       <BeforeAfterSection />
       <HowItWorksSection />

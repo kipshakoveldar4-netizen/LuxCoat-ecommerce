@@ -1,6 +1,8 @@
 import {
   ArrowRight,
   CheckCircle2,
+  CreditCard,
+  Globe2,
   ShieldCheck,
   Sparkles,
   Star,
@@ -36,9 +38,17 @@ export function Hero() {
               <ShieldCheck size={14} />
               6-7 month effect
             </span>
+            <span className="premium-chip">
+              <Globe2 size={14} />
+              USA, UK & Europe
+            </span>
+            <span className="premium-chip">
+              <CreditCard size={14} />
+              PayPal + 2Checkout ready
+            </span>
           </div>
           <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[1.02] text-white sm:text-6xl lg:text-7xl">
-            Premium mirror-gloss protection in about 15 minutes.
+            Mirror-gloss liquid glass protection in about 15 minutes.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-200">
             LuxCoat restores shine, adds a deep wet-look finish, and helps protect
@@ -68,6 +78,9 @@ export function Hero() {
               See Before / After
             </Link>
           </div>
+          <p className="mt-4 text-sm font-semibold text-slate-300">
+            Launch-ready checkout flow with tracked fulfillment from China.
+          </p>
           <div className="mt-8 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
             {productHighlights.map((item, index) => {
               const Icon =

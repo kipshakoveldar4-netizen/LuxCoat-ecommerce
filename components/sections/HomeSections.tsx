@@ -1,4 +1,4 @@
-import { ChevronRight, CreditCard, FileCheck2, ShieldCheck, Star } from "lucide-react";
+import { ChevronRight, CreditCard, FileCheck2, Globe2, LockKeyhole, ShieldCheck, Star, Truck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ProductCard } from "@/components/commerce/ProductCard";
@@ -14,6 +14,61 @@ import {
   product,
   reviews
 } from "@/lib/content";
+
+export function PremiumTrustStrip() {
+  const trustItems = [
+    {
+      icon: Truck,
+      title: "Tracked worldwide shipping",
+      text: "Fulfillment from China for USA, UK, and Europe orders."
+    },
+    {
+      icon: LockKeyhole,
+      title: "Secure checkout prepared",
+      text: "PayPal and 2Checkout placeholders are ready for live integration."
+    },
+    {
+      icon: FileCheck2,
+      title: "SDS and certificates area",
+      text: "Compliance documents have a dedicated buyer trust page."
+    },
+    {
+      icon: Globe2,
+      title: "Multi-market storefront",
+      text: "Currency selector and policy pages support international launch."
+    }
+  ];
+
+  return (
+    <section className="relative z-10 -mt-8 pb-4 sm:-mt-10">
+      <div className="page-shell">
+        <div className="glass-panel rounded-[2rem] p-4 shadow-2xl shadow-cobalt/10 sm:p-5">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {trustItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article
+                  className="rounded-[1.35rem] border border-white/10 bg-white/[0.045] p-4"
+                  key={item.title}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-cobalt/35 bg-cobalt/15 text-cobalt">
+                      <Icon size={20} />
+                    </span>
+                    <div>
+                      <h2 className="text-sm font-black text-white">{item.title}</h2>
+                      <p className="mt-1 text-xs leading-5 text-slate-400">{item.text}</p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function BeforeAfterSection() {
   return (
