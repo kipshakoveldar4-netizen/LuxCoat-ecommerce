@@ -1,0 +1,15 @@
+export const ADMIN_COOKIE_NAME = "luxcoat_admin";
+
+export function getAdminToken() {
+  return process.env.ADMIN_SESSION_TOKEN ?? "dev-luxcoat-admin-session";
+}
+
+export function getAdminPassword() {
+  return process.env.ADMIN_PASSWORD ?? "admin123";
+}
+
+export async function hasAdminSession() {
+  const { cookies } = await import("next/headers");
+  const cookieStore = await cookies();
+  return cookieStore.get(ADMIN_COOKIE_NAME)?.value === getAdminToken();
+}
