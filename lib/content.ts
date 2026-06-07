@@ -133,6 +133,30 @@ export const beforeAfterMetrics = [
   { label: "Touch feel", value: "Slick" }
 ];
 
+export const beforeAfterExamples = [
+  {
+    title: "Scratched tailgate restored",
+    eyebrow: "Red pickup tailgate",
+    image: "/images/before-after-tailgate.png",
+    alt: "Before and after comparison of a scratched red pickup tailgate restored with LuxCoat",
+    text: "Heavy-looking surface marks are visually reduced while the red paint gains a deeper reflective finish."
+  },
+  {
+    title: "Oxidized hood refreshed",
+    eyebrow: "Chevrolet hood",
+    image: "/images/before-after-chevy-hood.png",
+    alt: "Before and after comparison of an oxidized Chevrolet hood refreshed with LuxCoat",
+    text: "Oxidation appearance is reduced and the hood returns to a cleaner, glossier reflection."
+  },
+  {
+    title: "Faded paint brought back to life",
+    eyebrow: "Black Honda hood",
+    image: "/images/before-after-honda-hood.png",
+    alt: "Before and after comparison of a faded black Honda hood refreshed with LuxCoat",
+    text: "Faded paint appears darker and smoother, with a sharper liquid-glass look after application."
+  }
+];
+
 export const howItWorks = [
   {
     title: "Clean",

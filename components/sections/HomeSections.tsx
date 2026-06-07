@@ -1,11 +1,10 @@
-import { ChevronRight, CreditCard, FileCheck2, Globe2, LockKeyhole, ShieldCheck, Star, Truck } from "lucide-react";
+import { CreditCard, FileCheck2, Globe2, LockKeyhole, ShieldCheck, Star, Truck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ProductCard } from "@/components/commerce/ProductCard";
-import { BeforeAfterSlider } from "@/components/sections/BeforeAfterSlider";
+import { BeforeAfterGallery } from "@/components/sections/BeforeAfterGallery";
 import {
   applicationSteps,
-  beforeAfterMetrics,
   certificates,
   faqs,
   guaranteeTiles,
@@ -72,33 +71,9 @@ export function PremiumTrustStrip() {
 
 export function BeforeAfterSection() {
   return (
-    <section className="section">
+    <section className="section bg-black/25">
       <div className="page-shell">
-        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
-          <div>
-            <p className="eyebrow">Before / After</p>
-            <h2 className="section-title">A darker, sharper, more expensive-looking finish.</h2>
-            <p className="section-copy">
-              The comparison is framed like a detailing bay: dull paint on one side,
-              wet-look reflection and stronger water behavior on the other.
-            </p>
-            <div className="mt-7 grid grid-cols-3 gap-3">
-              {beforeAfterMetrics.map((metric) => (
-                <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-4" key={metric.label}>
-                  <p className="text-xl font-black text-white">{metric.value}</p>
-                  <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500">
-                    {metric.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <Link className="btn-secondary mt-7" href="/before-after">
-              Open Gallery
-              <ChevronRight size={18} />
-            </Link>
-          </div>
-          <BeforeAfterSlider />
-        </div>
+        <BeforeAfterGallery />
       </div>
     </section>
   );
