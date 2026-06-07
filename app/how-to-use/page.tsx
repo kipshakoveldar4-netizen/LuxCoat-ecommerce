@@ -19,13 +19,15 @@ export default function HowToUsePage() {
             towels for the clearest finish.
           </p>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/15">
+        <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-[2rem] border border-white/15 bg-black/35 p-4 sm:p-6">
           <Image
             alt="LuxCoat application bottle"
-            className="object-cover"
-            fill
-            sizes="(min-width: 1024px) 620px, 100vw"
+            className="h-full w-full object-contain"
+            height={1254}
+            quality={96}
+            sizes="(max-width: 768px) 100vw, 50vw"
             src="/images/luxcoat-product.png"
+            width={1254}
           />
         </div>
       </div>

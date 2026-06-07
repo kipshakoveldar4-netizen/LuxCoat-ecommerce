@@ -60,8 +60,16 @@ export function CartPageClient() {
                 className="glass-panel grid gap-5 rounded-[1.6rem] p-4 sm:grid-cols-[120px_1fr] lg:grid-cols-[120px_1fr_auto]"
                 key={item.productId}
               >
-                <div className="relative aspect-square overflow-hidden rounded-2xl bg-black/40">
-                  <Image alt={item.title} className="object-cover" fill sizes="120px" src={item.imageUrl} />
+                <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-2xl bg-black/40 p-1.5">
+                  <Image
+                    alt={item.title}
+                    className="h-full w-full object-contain"
+                    height={1254}
+                    quality={95}
+                    sizes="120px"
+                    src={item.imageUrl}
+                    width={1254}
+                  />
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-cobalt">

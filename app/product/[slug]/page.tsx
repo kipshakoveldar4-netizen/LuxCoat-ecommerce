@@ -46,14 +46,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <section className="page-shell section">
       <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <div className="glass-panel relative aspect-square overflow-hidden rounded-[2rem]">
+          <div className="glass-panel relative flex aspect-square items-center justify-center overflow-hidden rounded-[2rem] p-3 sm:p-5">
             <Image
               alt={product.title}
-              className="object-cover"
-              fill
+              className="h-full w-full object-contain"
+              height={1254}
               priority
-              sizes="(min-width: 1024px) 620px, 100vw"
+              quality={96}
+              sizes="(max-width: 768px) 100vw, 50vw"
               src={product.imageUrl}
+              width={1254}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             <div className="absolute left-5 top-5 flex flex-wrap gap-2">
@@ -64,15 +66,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="mt-4 grid grid-cols-3 gap-3 sm:gap-4">
             {product.gallery.map((image, index) => (
               <div
-                className="relative aspect-square overflow-hidden rounded-3xl border border-white/15 bg-white/[0.04]"
+                className="relative flex aspect-square items-center justify-center overflow-hidden rounded-3xl border border-white/15 bg-white/[0.04] p-1.5"
                 key={`${image}-${index}`}
               >
                 <Image
                   alt={`${product.title} gallery ${index + 1}`}
-                  className="object-cover"
-                  fill
-                  sizes="180px"
+                  className="h-full w-full object-contain"
+                  height={1254}
+                  quality={95}
+                  sizes="(max-width: 768px) 33vw, 180px"
                   src={image}
+                  width={1254}
                 />
               </div>
             ))}

@@ -312,8 +312,16 @@ export function CheckoutFlow() {
             <div className="mt-6 grid gap-4">
               {items.map((item) => (
                 <div className="flex gap-3" key={item.productId}>
-                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-black/40">
-                    <Image alt={item.title} className="object-cover" fill sizes="64px" src={item.imageUrl} />
+                  <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-black/40 p-1">
+                    <Image
+                      alt={item.title}
+                      className="h-full w-full object-contain"
+                      height={1254}
+                      quality={95}
+                      sizes="64px"
+                      src={item.imageUrl}
+                      width={1254}
+                    />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-bold text-white">{item.title}</p>

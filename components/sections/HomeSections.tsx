@@ -158,13 +158,15 @@ export function ApplyStepsSection() {
               })}
             </div>
           </div>
-          <div className="relative min-h-[460px] overflow-hidden rounded-[2rem] border border-white/15 bg-black sm:min-h-[560px]">
+          <div className="relative flex min-h-[460px] items-center justify-center overflow-hidden rounded-[2rem] border border-white/15 bg-black p-4 sm:min-h-[560px] sm:p-6">
             <Image
               alt="LuxCoat bottle on dark detailing surface"
-              className="object-cover"
-              fill
-              sizes="(min-width: 1024px) 520px, 100vw"
+              className="h-auto max-h-[520px] w-full max-w-[560px] object-contain"
+              height={1254}
+              quality={96}
+              sizes="(max-width: 768px) 100vw, 50vw"
               src="/images/luxcoat-product.png"
+              width={1254}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent" />
             <div className="absolute bottom-6 left-4 right-4 rounded-3xl border border-white/15 bg-black/62 p-5 backdrop-blur-xl sm:left-6 sm:right-6">

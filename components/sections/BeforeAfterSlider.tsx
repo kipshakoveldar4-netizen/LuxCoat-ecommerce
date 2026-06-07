@@ -14,6 +14,7 @@ export function BeforeAfterSlider() {
           alt="LuxCoat coated vehicle after application"
           className="object-cover object-[66%_50%]"
           fill
+          quality={95}
           sizes="(min-width: 1024px) 1080px, 100vw"
           src="/images/luxcoat-hero.png"
         />
@@ -26,6 +27,7 @@ export function BeforeAfterSlider() {
             alt="Vehicle finish before LuxCoat application"
             className="object-cover object-[66%_50%] grayscale brightness-[0.42] contrast-[0.88] saturate-50"
             fill
+            quality={95}
             sizes="(min-width: 1024px) 1080px, 100vw"
             src="/images/luxcoat-hero.png"
           />

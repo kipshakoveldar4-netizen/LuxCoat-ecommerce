@@ -11,15 +11,17 @@ export function ProductCard({ product }: { product: Product }) {
     <article className="glass-panel group overflow-hidden rounded-[2rem]">
       <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
         <Link
-          className="relative block min-h-[360px] overflow-hidden bg-black/50 sm:min-h-[440px] lg:min-h-full"
+          className="relative flex min-h-[360px] items-center justify-center overflow-hidden bg-black/50 p-4 sm:min-h-[440px] sm:p-6 lg:min-h-full"
           href={`/product/${product.slug}`}
         >
           <Image
             alt={product.title}
-            className="object-cover transition duration-700 group-hover:scale-105"
-            fill
-            sizes="(min-width: 1024px) 420px, 100vw"
+            className="h-auto max-h-[430px] w-full max-w-[520px] object-contain transition duration-500 group-hover:brightness-110"
+            height={1254}
+            quality={96}
+            sizes="(max-width: 768px) 100vw, 50vw"
             src={product.imageUrl}
+            width={1254}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           <span className="absolute left-5 top-5 rounded-full border border-cobalt/40 bg-cobalt/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-cobalt backdrop-blur-xl">

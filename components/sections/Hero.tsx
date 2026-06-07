@@ -18,9 +18,19 @@ export function Hero() {
     <section className="relative min-h-[calc(100vh-7rem)] overflow-hidden">
       <Image
         alt="LuxCoat Liquid Glass with glossy black car"
-        className="object-cover object-[68%_50%] sm:object-center"
+        className="object-cover object-center sm:hidden"
         fill
         priority
+        quality={96}
+        sizes="150vw"
+        src="/images/luxcoat-hero-mobile.png"
+      />
+      <Image
+        alt="LuxCoat Liquid Glass with glossy black car"
+        className="hidden object-cover object-[68%_50%] sm:block sm:object-center"
+        fill
+        priority
+        quality={95}
         sizes="100vw"
         src="/images/luxcoat-hero.png"
       />
