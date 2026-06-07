@@ -30,10 +30,24 @@ export async function generateMetadata({
   const product = await getProductBySlug(slug);
 
   return {
-    title: product.title,
+    title: `${product.title} ${product.sizeMl} ml`,
     description: product.description,
+    alternates: {
+      canonical: `/product/${product.slug}`
+    },
     openGraph: {
-      images: [product.imageUrl]
+      title: `${product.title} ${product.sizeMl} ml`,
+      description: product.description,
+      images: [
+        {
+          url: product.imageUrl,
+          width: 1254,
+          height: 1254,
+          alt: `${product.title} ${product.sizeMl} ml bottle`
+        }
+      ],
+      type: "website",
+      url: `/product/${product.slug}`
     }
   };
 }

@@ -18,7 +18,7 @@ export default function ContactPage() {
             product, compliance, or distribution details.
           </p>
           <div className="mt-8 grid gap-4 text-sm text-slate-300">
-            <p>Support: support@luxcoat.example</p>
+            <p>Support: 24-48 hour response via this form</p>
             <p>Markets: USA, UK, and Europe</p>
             <p>Shipping origin: China</p>
           </div>

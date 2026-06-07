@@ -3,7 +3,11 @@ import { BeforeAfterGallery } from "@/components/sections/BeforeAfterGallery";
 
 export const metadata: Metadata = {
   title: "Before / After",
-  description: "Compare LuxCoat Liquid Glass before and after finish."
+  description:
+    "See real LuxCoat before and after results for scratched, oxidized, and faded automotive paint.",
+  alternates: {
+    canonical: "/before-after"
+  }
 };
 
 export default function BeforeAfterPage() {

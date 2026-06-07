@@ -19,7 +19,8 @@ export function AdminLoginForm({ nextPath }: { nextPath?: string }) {
     });
 
     if (!response.ok) {
-      setError("Invalid password.");
+      const result = await response.json().catch(() => null);
+      setError(result?.error ?? "Invalid password.");
       return;
     }
 
@@ -35,7 +36,7 @@ export function AdminLoginForm({ nextPath }: { nextPath?: string }) {
       <h1 className="mt-6 text-3xl font-black text-white">LuxCoat Admin</h1>
       <p className="mt-3 text-sm leading-6 text-slate-400">
         Protected dashboard for orders, inventory, customer data, and product editing.
-        Local preview password is admin123 unless ADMIN_PASSWORD is set.
+        Sign in with the password configured in ADMIN_PASSWORD.
       </p>
       <input
         className="field mt-6"

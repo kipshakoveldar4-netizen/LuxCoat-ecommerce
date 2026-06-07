@@ -20,7 +20,7 @@ import type { Product } from "@/lib/types";
 
 export const site = {
   name: "LuxCoat",
-  url: "https://luxcoat.example",
+  url: "https://lux-coat-ecommerce.vercel.app",
   announcement: "Worldwide shipping from China | USA, UK & Europe available | Secure checkout ready"
 };
 
@@ -284,6 +284,6 @@ export const certificates = [
 
 export const markets = [
   { country: "United States", currency: "USD", symbol: "$" },
-  { country: "United Kingdom", currency: "GBP", symbol: "£" },
-  { country: "Europe", currency: "EUR", symbol: "€" }
+  { country: "United Kingdom", currency: "GBP", symbol: "\u00A3" },
+  { country: "Europe", currency: "EUR", symbol: "\u20AC" }
 ];

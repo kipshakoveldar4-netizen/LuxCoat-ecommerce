@@ -65,14 +65,13 @@ TWOCHECKOUT_SECRET_KEY=
 NEXT_PUBLIC_SITE_URL=
 ```
 
-Local admin preview:
+Admin login:
 
 ```text
 /admin/login
-password: admin123
 ```
 
-Set `ADMIN_PASSWORD` and `ADMIN_SESSION_TOKEN` for any shared or production environment.
+Set `ADMIN_PASSWORD` and `ADMIN_SESSION_TOKEN` in `.env.local` for local admin access and in Vercel/AWS environment variables for production.
 
 ## Database
 

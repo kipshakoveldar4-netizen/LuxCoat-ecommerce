@@ -9,7 +9,8 @@ export function middleware(request: NextRequest) {
   }
 
   const token = request.cookies.get(ADMIN_COOKIE_NAME)?.value;
-  if (token === getAdminToken()) {
+  const adminToken = getAdminToken();
+  if (adminToken && token === adminToken) {
     return NextResponse.next();
   }
 
