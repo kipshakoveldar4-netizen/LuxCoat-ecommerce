@@ -38,8 +38,8 @@ export const product: Product = {
   imageUrl: "/images/luxcoat-product.png",
   gallery: [
     "/images/luxcoat-product.png",
-    "/images/luxcoat-hero.png",
-    "/images/luxcoat-product.png"
+    "/images/luxcoat-packshot.png",
+    "/images/luxcoat-hero.png"
   ],
   benefits: [
     "Deep wet-look gloss",
